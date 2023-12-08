@@ -6,6 +6,6 @@ RUN apt install php7.4-{bcmath,fpm,xml,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstr
 RUN apt install apache2 libapache2-mod-php7.4 -y
 RUN apt install systemctl -y
 RUN mkdir -p  /var/www/html/php
-RUN sed -i 's/\/var\/www\/html/\/var\/www\/html\/php/g' 000-default.conf
+RUN sed -i 's/\/var\/www\/html/\/var\/www\/html\/php/g' /etc/apache2/sites-available/000-default.conf
 EXPOSE 80
 ENV edureka cert1
