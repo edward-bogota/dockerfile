@@ -14,5 +14,5 @@ RUN apt install systemctl -y
 RUN mkdir -p  /var/www/html/php
 RUN sed -i 's/\/var\/www\/html/\/var\/www\/html\/php/g' /etc/apache2/sites-available/000-default.conf
 EXPOSE 80
-CMD ["bash", "-c", "service apache2 start  tail -f /dev/null"]
+CMD ["bash", "-c", "service apache2 start && tail -f /dev/null"]
 ENV edureka cert1
